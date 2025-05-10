@@ -14,6 +14,7 @@ pipeline {
                 sh 'docker build -t flask-docker-app .'
             }
         }
+        //
 
         stage('Run Docker Container') {
             steps {
