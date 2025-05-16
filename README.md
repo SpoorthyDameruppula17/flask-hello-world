@@ -1,40 +1,80 @@
-# DevOps Internship Task Submission – Spoorthy
+Hello World Flask App with Jenkins CI/CD and Docker:-
 
-Hello! I'm Spoorthy, a recent graduate passionate about DevOps. This repository contains my submission for the DevOps Internship task. Due to time constraints, I was only able to complete part of the assignment, but I’m excited to learn more and improve.
-
-
-## What I Have Completed
-
-- Developed a simple “Hello World” web application using **Python Flask**.
-- Created a **Dockerfile** to containerize the app.
-- Wrote a **Jenkinsfile** to automate the pipeline:
-  - Clone/pull code from Codeberg
-  - Install dependencies
-  - Build Docker image
-  - Run the Flask app inside a container
-
-  ## What’s Not Working / Still Pending
-
-- I encountered issues running the app inside the Docker container, so it’s not fully working yet.
-- I couldn’t complete the **webhook** setup from Codeberg to Jenkins.
-- The **cleanup task (after 7 days)** is not implemented.
-- I do not have a screenshot or public IP to share since the app isn’t running successfully in Docker.
-
-## My Approach
-
-Even though I couldn’t finish the full deployment, I followed these DevOps steps:
-
-1. **Flask App**: A simple Python app that shows "Hello World" at `/`.
-2. **Dockerfile**: To containerize the app with Python and Flask.
-3. **Jenkinsfile**: For CI/CD automation. It’s designed to pull the code, build a Docker image, and run the container.
-4. **Cleanup Idea**: I planned to add a scheduled cleanup using a `cron` job or Jenkins scheduled job that runs `docker rm` and `docker rmi` after 7 days.
-
-## Repository Link
-
-This repository: https://codeberg.org/spoorthy/flask-docker-app.git
+This project is a simple "Hello World" Flask web application set up with CI/CD using Jenkins and Dockerized for deployment, built as part of the JarNox DevOps Internship Assignment.
 
 
-## Final Note
 
-I may not have completed every step, but I gave it an honest try. I’m still learning Docker and Jenkins, and I hope to get mentorship through this internship. Thank you for considering my submission!
+Objective:-
 
+To demonstrate a basic DevOps workflow that includes:
+
+   1. A simple web app (Flask)
+
+   2.Docker containerization
+
+   3. Jenkins pipeline for Continuous Integration and Deployment
+
+   4. Triggering builds via a Git repository (GitHub)
+
+
+
+Tech Stack:-
+  
+  1. Python + Flask – for the web app
+
+  2. Docker – to containerize the app
+
+  3. Jenkins – for automation (CI/CD)
+
+  4. GitHub – as the source code repository
+
+  5. Codeberg webhook / GitHub – to trigger Jenkins builds
+
+
+
+Features:-
+
+  * Shows “Hello, World!” on the web page
+
+  * Dockerfile builds the app into a container
+
+  * Jenkinsfile automates the build and run process
+
+  * Pipeline triggers automatically when code is pushed
+
+
+
+How It Works:-
+  
+  1. Flask app created (app.py) to return a simple message.
+
+  2. Dockerfile builds the app image.
+
+  3. Jenkinsfile defines a 3-stage pipeline:
+
+    * Clone Repo
+    * Build Docker Image
+    * Run Container
+
+  4. Jenkins listens for push events from GitHub.
+
+  5. When code is pushed, Jenkins:
+
+    * Clones the repo
+    * Builds the Docker image
+    * Runs the container
+
+
+
+Project Structure:-
+
+   1. app.py            # Flask web app
+   2. Dockerfile        # Docker image instructions         
+   3.Jenkinsfile        # Jenkins pipeline
+   4. README.md
+
+
+About Me:-
+
+Hi! I'm Spoorthy Dameruppula, a passionate DevOps enthusiast and recent graduate.
+This project was created as a part of my assignment to showcase my ability to use Jenkins and Docker in a basic CI/CD workflow.
