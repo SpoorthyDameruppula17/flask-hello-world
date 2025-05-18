@@ -63,10 +63,6 @@ To demonstrate a basic DevOps workflow that includes:
 
 
 
-## What’s Not Working / Still Pending:-
-- I couldn’t complete the **webhook** setup from Codeberg to Jenkins.
-- The **cleanup task (after 7 days)** is not implemented.
-
 
 ## About Me:-
 
